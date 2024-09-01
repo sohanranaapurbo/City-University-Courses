@@ -1,0 +1,66 @@
+1. CREATE DATABASE- CREATE DATABASE ISAP786;
+
+2. CREATE TABLE - CREATE TABLE university(ID int not null AUTO_INCREMENT,
+                        Name varchar(25),
+                        Address varchar(30),
+                        Mobile int(20),
+                        PRIMARY KEY(ID)
+                       );
+3. INSERT- INSERT INTO university(ID, Name, Address, Mobile)
+VALUES('2115602015','ISAP','Savar','01634599744'),
+(' ','Ishu','Nobinogor','01634599744'),
+(' ','Apurbo','Ashulia','01634599744'),
+(' ','Israt','Dhaka','01634599744'),
+(' ','Sohan','Khagan','01634599744');
+
+4.SELECT & Where- SELECT * FROM `university` WHERE Name='Ishu';
+
+5. SELECT DISTINCT- SELECT DISTINCT ID,Mobile FROM university;
+
+6.AND- SELECT * FROM university WHERE Name='Apurbo' AND Address='Ashulia';
+
+7.OR- SELECT * FROM university WHERE Name='Apurbo' OR Address='Ashulia' OR Mobile='01634599744';
+
+8. NOT- SELECT * FROM `university` WHERE NOT Name='Ishu';  //Ishu bade sob asbe output a
+
+9. ORDER BY- (ASC)_ SELECT Address FROM `university` ORDER BY Address ASC;
+
+		(DESC)_ SELECT Address FROM `university` ORDER BY Address DESC;
+
+10. UPDATE_ UPDATE university SET Name='ApurboIshu', Address='Chandpur' WHERE ID='2115602015';
+
+11. DELETE_ DELETE FROM university WHERE Mobile='01874264850';
+
+12. MAX - SELECT MAX(Balance) FROM university;
+
+13 Min- SELECT MIN(Balance) FROM university;
+
+14. AVG- SELECT AVG(Balance) FROM university;
+
+15. COUNT-SELECT COUNT(Balance) FROM university;
+
+16. SUM- SELECT SUM(Balance) FROM university;
+
+17. SUM with Alias_ SELECT SUM(Balance) AS Sum FROM university;
+
+18. LIKE- SELECT Address FROM university WHERE Address LIKE 'a%'; 
+
+19. IN - SELECT Address FROM university WHERE Address IN ('Ashulia','Dhaka','Chandpur');
+
+20. BETWEEN- SELECT Balance FROM university WHERE Balance BETWEEN '5000' AND '10000';
+
+21. Alias- SELECT Address AS Details FROM university;
+
+22. INNER JOIN- SELECT customer.ID, university.Name FROM customer INNER JOIN university ON customer.ID= university.ID;
+
+23. LEFT JOIN- SELECT customer.ID, university.Name FROM customer LEFT JOIN university ON customer.ID= university.ID;
+
+24. RIGHT JOIN- SELECT customer.ID, university.Name FROM customer RIGHT JOIN university ON customer.ID= university.ID;
+
+25. UNION- SELECT * FROM customer
+UNION-
+SELECT * FROM university;
+
+26. ALTER TABLE-  ALTER TABLE customer
+ ADD amirtmi varchar(20);
+

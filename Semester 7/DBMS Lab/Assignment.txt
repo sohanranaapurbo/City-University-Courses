@@ -1,0 +1,77 @@
+1.create table example:
+		
+		CREATE TABLE library(std_id INT NOT NULL AUTO_INCREMENT,
+							name varchar(20),
+							gender varchar(25),
+							department INT(15),
+							books_amount INT(25),
+							PRIMARY KEY(std_id));
+
+
+2. INSERT INTO example:
+
+				INSERT INTO library(std_id, name, gender, department,books_amount)
+				VALUES('211','Israt','Female','CSE','2'),
+				(' ','Jahan','Female','BBA','3'),
+				(' ','Santa','Female','EEE','5'),
+				(' ','Apurbo','Male','CE','10');
+
+3. ORDER BY example 
+				SELECT * FROM library
+   				ORDER BY name DESC;
+				SELECT * FROM library1
+   				ORDER BY name DESC;
+
+4. BETWEEN example
+				SELECT std_id,name
+ 				FROM library1
+				WHERE books_quantity
+				BETWEEN 3 AND 10;
+
+5. IN example
+
+				SELECT Name
+				FROM library1
+				WHERE book_quantity IN (3,5,10);
+
+6. INNER JOIN example with schema:
+							
+							library(std_id, name, gender, department,books_amount)
+							employee(emp_id, emp_name, address, mobile,std_id)
+
+							SELECT library1.std_id, employee.emp_id
+							FROM library1
+							INNER JOIN employee
+							ON library.std_id=employee.std_id;
+
+7. ALIAS example:
+
+			SELECT Name, gender AS std_Details
+				From library;
+
+8. ALTER TABLE example
+
+					ALTER TABLE hospital
+					ADD patient_address varchar(25);
+
+9. CASE example
+
+			SELECT std_id,name,department,
+CASE
+    WHEN department = 'CSE' THEN 'Students of Engeneering Faculty'
+    WHEN department = 'BBA' THEN 'Students of Business Faculty'
+    WHEN department = 'LAW' THEN 'Students of Law Faculty'
+    WHEN department = 'EEE' THEN 'Students of Sciencce Faculty'
+
+    ELSE 'Unknown department'
+END AS department_name
+FROM library1;
+
+
+
+10. View Table example:
+
+
+CREATE VIEW Students_view AS
+SELECT name, gender
+FROM  library1;

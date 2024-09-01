@@ -1,0 +1,46 @@
+CREATE DATABASE ISAP_ITFARM
+
+CREATE TABLE Software_developer(Dev_id int(30) AUTO_INCREMENT,
+                               Dev_Name varchar(45),
+                                Dev_Address varchar(25),
+                                Dev_Mobile int(20),
+                                Joining_Date int(30),
+                                PRIMARY KEY(Dev_Id)
+                               
+                               );
+
+CREATE TABLE Web_Developer(Web_Id int(20) AUTO_INCREMENT,
+                          Web_Name varchar(30),
+                           Web_Address varchar(45),
+                           DOB Date(30),
+                           Salary int(30),
+                           PRIMARY KEY(Web_Id)
+                          );
+
+
+INSERT INTO software_developer(Dev_id,Dev_Name,Dev_Address,Dev_Mobile,Joining_Date)
+  VALUES('2115602015','Sohan','Nobinogor','01874264850','2022-07-23'),
+  (' ','Rana','Savar','015842464850','2021-01-07'),
+  (' ','Apurbo','Cantonment','01634599744','2020-02-10'),
+  (' ','Israt','Chandpur','013042000830','2022-07-10'),
+  (' ','Jahan','Cumilla','01474264810','2016-04-25'),
+  (' ','Santa','Ashulia','01974264800','2018-08-29');
+
+
+
+INSERT INTO web_developer(Web_Id,Web_Name,Web_Address,DOB,Salary)
+VALUES('211560','Abdul','Tangail','2001-07-23','5000'),
+(' ','Kalam','Tangail','1999-09-09','10000'),
+(' ','Azad','Sirajganj','1995-05-06','15000'),
+(' ','Rofiq','Manikganj','2002-04-20','20000'),
+(' ','Shofiq','Dhaka','2001-10-10','25000'),
+(' ','Jobbar','Khulna','1997-08-29','55000');
+
+
+1. SELECT Dev_Address FROM software_developer WHERE Dev_Address LIKE 'a%';
+2. SELECT Salary FROM web_developer WHERE Salary BETWEEN 10000 AND 20000;
+3. SELECT Dev_id,Dev_Name AS Devdetails FROM software_developer;
+4.SELECT * FROM web_developer
+WHERE Web_Address IN ('Tangail', 'Dhaka', 'Khulna');
+
+  
